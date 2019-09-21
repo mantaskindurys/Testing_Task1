@@ -216,8 +216,8 @@ namespace Task1_Tests
             Cylinder cylinder = new Cylinder();
             double r = 4;
             double height = 5;
-            double pi = 3.14;
-            double expectedResult = (pi * r * r * height);
+            double pie = 3.14;
+            double expectedResult = (pie * r * r * height);
             double actual = cylinder.Base(r,height);
             Assert.AreEqual(expectedResult, actual, 0);
         }
