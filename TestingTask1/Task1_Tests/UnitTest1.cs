@@ -201,19 +201,36 @@ namespace Task1_Tests
         [TestMethod]
         public void TestGetSurficeArea()
         {
-
+            Cylinder cylinder = new Cylinder();
+            double r = 4;
+            double height = 5;
+            double pi = 3.14;
+            double expectedResult = (2*pi * r * height+(2*pi*r*r));
+            double actual = cylinder.Base(r, height);
+            Assert.AreEqual(expectedResult, actual, 0);
         }
 
         [TestMethod]
         public void TestGetVolume()
         {
-
+            Cylinder cylinder = new Cylinder();
+            double r = 4;
+            double height = 5;
+            double pi = 3.14;
+            double expectedResult = (pi * r * r * height);
+            double actual = cylinder.Base(r,height);
+            Assert.AreEqual(expectedResult, actual, 0);
         }
 
         [TestMethod]
         public void TestGetBase()
         {
-
+            Cylinder cylinder = new Cylinder();
+            double r = 4;
+            double pi = 3.14;
+            double expectedResult = (pi * r * r);
+            double actual = cylinder.Base(r);
+            Assert.AreEqual(expectedResult, actual, 0);
         }
     }
 
@@ -223,19 +240,36 @@ namespace Task1_Tests
         [TestMethod]
         public void TestGetSurficeArea()
         {
-
+            Cone cone = new Cone();
+            double r = 4;
+            double slant = 3;
+            double pi = 3.14;
+            double expectedResult = (pi * r * slant + (pi*r*r));
+            double actual = cone.SurfaceArea(r, height);
+            Assert.AreEqual(expectedResult, actual, 0);
         }
 
         [TestMethod]
         public void TestGetVolume()
         {
-
+            Cone cone = new Cone();
+            double r = 4;
+            double height = 3;
+            double pi = 3.14;
+            double expectedResult = (pi * r * r *(height/3));
+            double actual = cone.GetVolume(r,height);
+            Assert.AreEqual(expectedResult, actual, 0);
         }
 
         [TestMethod]
         public void TestGetBase()
         {
-
+            Cone cone = new Cone();
+            double r = 4;
+            double pi = 3.14;
+            double expectedResult = (pi * r * r);
+            double actual = cone.Base(r);
+            Assert.AreEqual(expectedResult, actual, 0);
         }
     }
 }
