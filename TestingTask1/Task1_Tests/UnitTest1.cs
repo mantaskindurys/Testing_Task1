@@ -81,7 +81,7 @@ namespace Task1_Tests
 
             double expectedResult;
 
-            expectedResult = triangleBase + side1 + side2;
+            double expectedResult = triangleBase + side1 + side2;
 
             double actual = Triangle.GetPerimeter(triangleBase, side1, side2);
 
@@ -97,7 +97,7 @@ namespace Task1_Tests
             double expectedResult;
 
 
-            expectedResult = (triangleBase * triangleHeight) / 2;
+            double expectedResult = (triangleBase * triangleHeight) / 2;
 
             double actual = Triangle.GetArea(triangleBase, triangleHeight);
 
