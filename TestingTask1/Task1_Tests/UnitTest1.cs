@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TestingTask1.Two_Dimensional;
+using TestingTask1.Three_Dimenstional;
 
 namespace Task1_Tests
 {
@@ -135,13 +136,21 @@ namespace Task1_Tests
         [TestMethod]
         public void TestGetSurficeArea()
         {
-
+            double r = 5;
+            double pi = 3.14;
+            double expectedResult = 4 * pi * (r * r);
+            double actual = Sphere.GetSurficeArea(r);
+            Assert.AreEqual(expectedResult, actual, 0);
         }
 
         [TestMethod]
         public void TestGetVolume()
         {
-
+            double r = 5;
+            double pi = 3.14;
+            double expectedResult = (3 / 4) * pi * (r * r * r);
+            double actual = Sphere.GetVolume(r);
+            Assert.AreEqual(expectedResult, actual, 0);
         }
     }
 
@@ -151,18 +160,37 @@ namespace Task1_Tests
         [TestMethod]
         public void TestGetSurficeArea()
         {
+            double squarePyramidBase = 5;
+            double squarePyramidSlant = 8;
+
+            double expectedResult = 2 * squarePyramidBase * squarePyramidSlant + (squarePyramidBase * squarePyramidBase);
+            double actual = SquarePyramid.GetSurficeArea(squarePyramidBase, squarePyramidSlant);
+
+            Assert.AreEqual(expectedResult, actual, 0);
+
 
         }
 
         [TestMethod]
         public void TestGetVolume()
         {
+            double squarePyramidBase = 5;
+            double squarePyramidHeight = 5;
 
+            double expectedResult = (1 / 3) * (squarePyramidBase * squarePyramidBase) * squarePyramidHeight;
+            double actual = SquarePyramid.GetVolume(squarePyramidBase, squarePyramidHeight);
+            Assert.AreEqual(expectedResult, actual, 0);
         }
 
         [TestMethod]
         public void TestGetBase()
         {
+            double squarePyramidBase = 9;
+
+            double expectedResult = squarePyramidBase * squarePyramidBase;
+            double actual = SquarePyramid.GetBase(squarePyramidBase);
+            Assert.AreEqual(expectedResult, actual, 0);
+
 
         }
     }
