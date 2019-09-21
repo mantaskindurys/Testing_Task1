@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestingTask1.Two_Dimensional
 {
-    class Rectangle
+    public class Rectangle
     {
     }
 }
