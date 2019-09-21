@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Three_Dimenstional\Cone.cs" />
+    <Compile Include="Three_Dimenstional\Cylinder.cs" />
+    <Compile Include="Three_Dimenstional\Sphere.cs" />
+    <Compile Include="Three_Dimenstional\SquarePyramid.cs" />
     <Compile Include="Two_Dimensional\Circle.cs" />
     <Compile Include="Two_Dimensional\Rectangle.cs" />
     <Compile Include="Two_Dimensional\Square.cs" />

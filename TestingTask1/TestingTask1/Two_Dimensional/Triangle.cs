@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestingTask1.Two_Dimensional
 {
-    class Triangle
+    public class Triangle
     {
         public double GetPerimeter(double triangleBase, double side1, double side2)
         {

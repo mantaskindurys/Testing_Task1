@@ -79,11 +79,10 @@ namespace Task1_Tests
             double side1 = 4;
             double side2 = 4;
 
-            double expectedResult;
-
+            Triangle triangle = new Triangle();
             double expectedResult = triangleBase + side1 + side2;
 
-            double actual = Triangle.GetPerimeter(triangleBase, side1, side2);
+            double actual = triangle.GetPerimeter(triangleBase, side1, side2);
 
             Assert.AreEqual(expectedResult, actual, 0);
 
@@ -94,12 +93,11 @@ namespace Task1_Tests
         {
             double triangleBase = 20;
             double triangleHeight = 12;
-            double expectedResult;
 
-
+            Triangle triangle = new Triangle();
             double expectedResult = (triangleBase * triangleHeight) / 2;
 
-            double actual = Triangle.GetArea(triangleBase, triangleHeight);
+            double actual = triangle.GetArea(triangleBase, triangleHeight);
 
             Assert.AreEqual(expectedResult, actual, 0);
         }
@@ -128,6 +126,88 @@ namespace Task1_Tests
             double expectedResult = (pi * r * r);
             double actual = Circle.GetArea(r);
             Assert.AreEqual(expectedResult, actual, 0);
+        }
+    }
+
+    [TestClass]
+    public class SphereTest
+    {
+        [TestMethod]
+        public void TestGetSurficeArea()
+        {
+
+        }
+
+        [TestMethod]
+        public void TestGetVolume()
+        {
+
+        }
+    }
+
+    [TestClass]
+    public class SquarePyramidTest
+    {
+        [TestMethod]
+        public void TestGetSurficeArea()
+        {
+
+        }
+
+        [TestMethod]
+        public void TestGetVolume()
+        {
+
+        }
+
+        [TestMethod]
+        public void TestGetBase()
+        {
+
+        }
+    }
+
+    [TestClass]
+    public class CylinderTest
+    {
+        [TestMethod]
+        public void TestGetSurficeArea()
+        {
+
+        }
+
+        [TestMethod]
+        public void TestGetVolume()
+        {
+
+        }
+
+        [TestMethod]
+        public void TestGetBase()
+        {
+
+        }
+    }
+
+    [TestClass]
+    public class ConeTest
+    {
+        [TestMethod]
+        public void TestGetSurficeArea()
+        {
+
+        }
+
+        [TestMethod]
+        public void TestGetVolume()
+        {
+
+        }
+
+        [TestMethod]
+        public void TestGetBase()
+        {
+
         }
     }
 }
