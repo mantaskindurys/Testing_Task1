@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestingTask1._2_Dimensional
+namespace TestingTask1.Two_Dimensional
 {
     public class Square
     {
-        public static double getPerimeter(double sideLenght)
+        public double GetPerimeter(double sideLenght)
         {
             if(sideLenght <= 0)
             {
@@ -21,5 +21,19 @@ namespace TestingTask1._2_Dimensional
             }
             
         }
+
+        public double GetArea(double sideLenght)
+        {
+            if (sideLenght <= 0)
+            {
+                throw new System.ArgumentException("Parameter cannot be less or equal to 0", "sideLenght");
+            }
+            else
+            {
+                double area = sideLenght * sideLenght;
+                return area;
+            }
+        }
+
     }
 }
