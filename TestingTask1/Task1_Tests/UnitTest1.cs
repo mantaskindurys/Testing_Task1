@@ -134,22 +134,24 @@ namespace Task1_Tests
     public class SphereTest
     {
         [TestMethod]
-        public void TestGetSurficeArea()
+        public void TestGetSurfaceArea()
         {
+            Sphere sphere = new Sphere();
             double r = 5;
             double pi = 3.14;
             double expectedResult = 4 * pi * (r * r);
-            double actual = Sphere.GetSurficeArea(r);
+            double actual = sphere.GetSurfaceArea(r);
             Assert.AreEqual(expectedResult, actual, 0);
         }
 
         [TestMethod]
         public void TestGetVolume()
         {
+            Sphere sphere = new Sphere();
             double r = 5;
             double pi = 3.14;
             double expectedResult = (3 / 4) * pi * (r * r * r);
-            double actual = Sphere.GetVolume(r);
+            double actual = sphere.GetVolume(r);
             Assert.AreEqual(expectedResult, actual, 0);
         }
     }
@@ -160,11 +162,12 @@ namespace Task1_Tests
         [TestMethod]
         public void TestGetSurficeArea()
         {
+            SquarePyramid pyramid = new SquarePyramid();
             double squarePyramidBase = 5;
             double squarePyramidSlant = 8;
 
             double expectedResult = 2 * squarePyramidBase * squarePyramidSlant + (squarePyramidBase * squarePyramidBase);
-            double actual = SquarePyramid.GetSurficeArea(squarePyramidBase, squarePyramidSlant);
+            double actual = pyramid.GetSurficeArea(squarePyramidBase, squarePyramidSlant);
 
             Assert.AreEqual(expectedResult, actual, 0);
 
@@ -174,21 +177,22 @@ namespace Task1_Tests
         [TestMethod]
         public void TestGetVolume()
         {
+            SquarePyramid pyramid = new SquarePyramid();
             double squarePyramidBase = 5;
             double squarePyramidHeight = 5;
 
             double expectedResult = (1 / 3) * (squarePyramidBase * squarePyramidBase) * squarePyramidHeight;
-            double actual = SquarePyramid.GetVolume(squarePyramidBase, squarePyramidHeight);
+            double actual = pyramid.GetVolume(squarePyramidBase, squarePyramidHeight);
             Assert.AreEqual(expectedResult, actual, 0);
         }
 
         [TestMethod]
         public void TestGetBase()
         {
+            SquarePyramid pyramid = new SquarePyramid();
             double squarePyramidBase = 9;
-
             double expectedResult = squarePyramidBase * squarePyramidBase;
-            double actual = SquarePyramid.GetBase(squarePyramidBase);
+            double actual = pyramid.GetBase(squarePyramidBase);
             Assert.AreEqual(expectedResult, actual, 0);
 
 
@@ -199,14 +203,14 @@ namespace Task1_Tests
     public class CylinderTest
     {
         [TestMethod]
-        public void TestGetSurficeArea()
+        public void TestGetSurfaceArea()
         {
             Cylinder cylinder = new Cylinder();
             double r = 4;
             double height = 5;
             double pi = 3.14;
             double expectedResult = (2*pi * r * height+(2*pi*r*r));
-            double actual = cylinder.Base(r, height);
+            double actual = cylinder.GetSurfaceArea(r, height);
             Assert.AreEqual(expectedResult, actual, 0);
         }
 
@@ -218,7 +222,7 @@ namespace Task1_Tests
             double height = 5;
             double pie = 3.14;
             double expectedResult = (pie * r * r * height);
-            double actual = cylinder.Base(r,height);
+            double actual = cylinder.GetVolume(r,height);
             Assert.AreEqual(expectedResult, actual, 0);
         }
 
@@ -229,7 +233,7 @@ namespace Task1_Tests
             double r = 4;
             double pi = 3.14;
             double expectedResult = (pi * r * r);
-            double actual = cylinder.Base(r);
+            double actual = cylinder.GetBase(r);
             Assert.AreEqual(expectedResult, actual, 0);
         }
     }
@@ -245,7 +249,7 @@ namespace Task1_Tests
             double slant = 3;
             double pi = 3.14;
             double expectedResult = (pi * r * slant + (pi*r*r));
-            double actual = cone.SurfaceArea(r, height);
+            double actual = cone.GetSurfaceArea(r, height);
             Assert.AreEqual(expectedResult, actual, 0);
         }
 
@@ -268,7 +272,7 @@ namespace Task1_Tests
             double r = 4;
             double pi = 3.14;
             double expectedResult = (pi * r * r);
-            double actual = cone.Base(r);
+            double actual = cone.GetBase(r);
             Assert.AreEqual(expectedResult, actual, 0);
         }
     }
