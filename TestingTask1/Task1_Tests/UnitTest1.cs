@@ -206,11 +206,11 @@ namespace Task1_Tests
         public void TestGetSurfaceArea()
         {
             Cylinder cylinder = new Cylinder();
-            double r = 4;
+            double radius = 4;
             double height = 5;
             double pi = 3.14;
-            double expectedResult = (2*pi * r * height+(2*pi*r*r));
-            double actual = cylinder.GetSurfaceArea(r, height);
+            double expectedResult = (2*pi * radius * height+(2*pi*radius*radius));
+            double actual = cylinder.GetSurfaceArea(radius, height);
             Assert.AreEqual(expectedResult, actual, 0);
         }
 
@@ -232,7 +232,7 @@ namespace Task1_Tests
             Cylinder cylinder = new Cylinder();
             double r = 4;
             double pi = 3.14;
-            double expectedResult = (pi * r * r);
+            double expectedResult = (pi * 2 * r);
             double actual = cylinder.GetBase(r);
             Assert.AreEqual(expectedResult, actual, 0);
         }
@@ -271,7 +271,7 @@ namespace Task1_Tests
             Cone cone = new Cone();
             double r = 4;
             double pi = 3.14;
-            double expectedResult = (pi * r * r);
+            double expectedResult = (pi * 2 * r);
             double actual = cone.GetBase(r);
             Assert.AreEqual(expectedResult, actual, 0);
         }

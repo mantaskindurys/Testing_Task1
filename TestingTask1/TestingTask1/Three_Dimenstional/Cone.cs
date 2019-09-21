@@ -41,7 +41,8 @@ namespace TestingTask1.Three_Dimenstional
         public double GetBase(double radius)
         {
             Circle circle = new Circle();
-            return circle.GetCircumference(radius);
+            double circleBase = circle.GetCircumference(radius);
+            return circleBase;
             
         }
     }

@@ -38,7 +38,8 @@ namespace TestingTask1.Three_Dimenstional
         public double GetBase(double squarePyramidBase)
         {
             Square square = new Square();
-            return square.GetPerimeter(squarePyramidBase);
+            double result = square.GetArea(squarePyramidBase);
+            return result;
         }
     }
 }
